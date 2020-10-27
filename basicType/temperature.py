@@ -1,0 +1,1 @@
+print(float(input())*9/5 + 32)

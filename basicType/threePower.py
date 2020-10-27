@@ -1,0 +1,1 @@
+print(float(input())**3 + float(input())**3 + float(input())**3)
