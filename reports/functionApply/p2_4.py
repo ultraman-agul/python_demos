@@ -4,7 +4,7 @@
 # Software : PyCharm
 # version： Python 3.7
 # @File    : p2_4.py
-# description :
+# description : 定义一个素数判断函数 isPrime(n)，利用该函数输出 100 以内的所有素数。
 def isPrime(n):
     flag = True
     for i in range(2, n):
@@ -14,5 +14,5 @@ def isPrime(n):
     if flag:
         print(n, end=" ")
 
-for i in range(1, 101):
+for i in range(1, 100):
     isPrime(i)
