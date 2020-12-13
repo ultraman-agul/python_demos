@@ -11,6 +11,7 @@ class GameAnimal:
     x = 0
     y = 0
     buchang = 0
+
     def initLocation(self, name):
         self.x = random.randint(0, 10)
         self.y = random.randint(0, 10)
@@ -21,12 +22,12 @@ class GameAnimal:
 
     def move(self, name):
         if name == 't':
-            buchang = random.choice([-2, -1, 1, 2])
+            self.buchang = random.choice([-2, -1, 1, 2])
             xory = random.choice([1, 2])
             if xory == 1:
-                self.x += buchang
+                self.x += self.buchang
             else:
-                self.y += buchang
+                self.y += self.buchang
         else:
             buchang = random.choice([-1, 1])
             xory = random.choice([1, 2])
@@ -58,7 +59,7 @@ class Tortoise(GameAnimal):
             print('第{}条鱼被吃掉了，其位置（{}，{}），当前乌龟体力：{}'.format(i.name, i.x, i.y, self.hp))
 
     def show(self):
-        print('当前乌龟步长{}，移动后的位置：（{}，{}），当前体力：{}'.format(self.buchang, self.x, self.y, self.hp))
+        print('当前乌龟步长{}，移动后的位置：（{}，{}），当前体力：{}'.format(abs(self.buchang), self.x, self.y, self.hp))
 
 
 class Fish(GameAnimal):
